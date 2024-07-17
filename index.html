@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo List App</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="todo">
+       Task Manager
+      </div>
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Search tasks">
+      </div>
+      <div class="filter">
+        <div class="filters">
+          <label for="statusFilter">Filter by Status:</label>
+          <select id="statusFilter" onchange="filterTasks()">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+      </div>
+      <div class="sort">
+        
+      <label for="sortOrder">Sort Order:</label>
+      <select id="sortOrder" onchange="sortTasks()">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+      </div>
+    </nav>
+  </header>
+ <div class="container">
+  <div class="todo-container">
+    <input type="text" id="taskheadingInput" placeholder="Add a new task">
+    <input type="text" id="taskInput" placeholder="Add Description">
+    <select id="categorySelect">
+      <option value="Personal">Personal</option>
+      <option value="Work">Work</option>
+      <option value="Shopping">Shopping</option>
+    
+    </select>
+    <input type="date" id="dueDateInput"> 
+    <button onclick="addTask()">Add Task</button>
+  </div>
+  
+  
+
+<div class="task-grid" id="taskGrid">
+  
+  <div id="task-item">
+
+  </div>
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
